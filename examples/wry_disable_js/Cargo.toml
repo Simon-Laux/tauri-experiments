@@ -5,4 +5,4 @@ edition = "2021"
 
 [dependencies]
 tao = "0.32.0"
-wry = { version = "0.48.1", git = "https://github.com/Simon-Laux/wry", branch = "disable-javascript" }
+wry = { version = "0.49.0", git = "https://github.com/Simon-Laux/wry", branch = "disable-javascript" }
