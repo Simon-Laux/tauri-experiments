@@ -1,0 +1,8 @@
+[package]
+name = "wry_disable_js"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tao = "0.32.0"
+wry = { version = "0.48.1", path = "../../../wry" }
