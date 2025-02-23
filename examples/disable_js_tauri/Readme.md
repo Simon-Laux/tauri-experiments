@@ -1,6 +1,6 @@
 ## Example for tauri `WebviewBuilder.disable_javascript`
 
-PR: (TODO)
+PR: https://github.com/tauri-apps/tauri/pull/12792
 
 ## Usage
 

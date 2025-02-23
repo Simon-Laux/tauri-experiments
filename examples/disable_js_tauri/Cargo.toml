@@ -4,9 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-tauri = { version = "2.2.5", path = "../../../tauri/crates/tauri", features = [
+tauri = { version = "2.2.5", git = "https://github.com/Simon-Laux/tauri", branch = "disable-javascript", features = [
     "unstable",
 ] }
 
 [build-dependencies]
-tauri-build = { version = "2.0.5", path = "../../../tauri/crates/tauri-build" }
+tauri-build = { version = "2.0.5", git = "https://github.com/Simon-Laux/tauri", branch = "disable-javascript" }
