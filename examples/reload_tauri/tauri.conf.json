@@ -2,9 +2,10 @@
   "$schema": "https://schema.tauri.app/config/2",
   "productName": "disable js in Webview",
   "version": "0.1.0",
-  "identifier": "com.tauri.dev",
+  "identifier": "de.simonlaux.tauri.test",
   "build": {
-    "frontendDist": ["index.html"]
+    "devUrl": null,
+    "frontendDist": "html"
   },
   "app": {
     "security": {
