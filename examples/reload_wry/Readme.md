@@ -1,6 +1,6 @@
-## Example for wry ``
+## Example for wry `Webview.reload`
 
-PR: TODO
+PR: https://github.com/tauri-apps/wry/pull/1500
 
 ## Usage
 

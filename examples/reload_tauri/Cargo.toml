@@ -3,8 +3,13 @@ name = "reload_tauri"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+name = "reload_tauri_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
 [dependencies]
 tauri = { workspace = true }
+tokio = { version = "1.43.0", features = ["time"] }
 
 [build-dependencies]
 tauri-build = { workspace = true }
