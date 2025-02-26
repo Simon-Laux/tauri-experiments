@@ -3,12 +3,12 @@ members = ["examples/*"]
 resolver = "2"
 
 [workspace.dependencies]
-# tauri = { version = "2.2.5", git = "https://github.com/Simon-Laux/tauri", branch = "disable-javascript", features = [
-#     "unstable",
-# ] }
+tauri = { git = "https://github.com/Simon-Laux/tauri", branch = "reload-feature", features = [
+    "unstable",
+] }
 
-tauri = { path = "../tauri/crates/tauri", features = ["unstable"] }
+# tauri = { path = "../tauri/crates/tauri", features = ["unstable"] }
 
-# tauri-build = { version = "2.0.5", git = "https://github.com/Simon-Laux/tauri", branch = "disable-javascript" }
+tauri-build = { git = "https://github.com/Simon-Laux/tauri", branch = "reload-feature" }
 
-tauri-build = { path = "../tauri/crates/tauri-build" }
+# tauri-build = { path = "../tauri/crates/tauri-build" }
