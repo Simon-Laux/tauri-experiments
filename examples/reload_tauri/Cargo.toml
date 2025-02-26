@@ -1,5 +1,5 @@
 [package]
-name = "tauri_disable_js"
+name = "reload_tauri"
 version = "0.1.0"
 edition = "2021"
 

@@ -2608,6 +2608,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2b15c43186be67a4fd63bee50d0303afffcef381492ebe2c5d87f324e1b8815c"
 
 [[package]]
+name = "reload_tauri"
+version = "0.1.0"
+dependencies = [
+ "tauri",
+ "tauri-build",
+]
+
+[[package]]
+name = "reload_wry"
+version = "0.1.0"
+dependencies = [
+ "tao",
+ "wry 0.50.0",
+]
+
+[[package]]
 name = "reqwest"
 version = "0.12.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3180,9 +3196,9 @@ dependencies = [
 
 [[package]]
 name = "tao"
-version = "0.32.0"
+version = "0.32.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8d96d84dbf4ad70179129e6533738e30604f8977c8646723da684521645f5f95"
+checksum = "9899a4cb2590e669dd9d32ea6360ac67f29843fbf0424e06f9fc0e9e1ec9579a"
 dependencies = [
  "bitflags 2.8.0",
  "core-foundation",
@@ -3237,7 +3253,6 @@ checksum = "61c41af27dd6d1e27b1b16b489db798443478cef1f06a660c96db617ba5de3b1"
 [[package]]
 name = "tauri"
 version = "2.2.5"
-source = "git+https://github.com/Simon-Laux/tauri?branch=disable-javascript#e9bbf72b0e6a34558ac5067e7cef3a5be486aa9b"
 dependencies = [
  "anyhow",
  "bytes",
@@ -3278,15 +3293,14 @@ dependencies = [
  "url",
  "urlpattern",
  "webkit2gtk",
- "webview2-com",
+ "webview2-com 0.36.0",
  "window-vibrancy",
- "windows 0.59.0",
+ "windows 0.60.0",
 ]
 
 [[package]]
 name = "tauri-build"
 version = "2.0.5"
-source = "git+https://github.com/Simon-Laux/tauri?branch=disable-javascript#e9bbf72b0e6a34558ac5067e7cef3a5be486aa9b"
 dependencies = [
  "anyhow",
  "cargo_toml",
@@ -3307,7 +3321,6 @@ dependencies = [
 [[package]]
 name = "tauri-codegen"
 version = "2.0.4"
-source = "git+https://github.com/Simon-Laux/tauri?branch=disable-javascript#e9bbf72b0e6a34558ac5067e7cef3a5be486aa9b"
 dependencies = [
  "base64 0.22.1",
  "brotli",
@@ -3333,7 +3346,6 @@ dependencies = [
 [[package]]
 name = "tauri-macros"
 version = "2.0.4"
-source = "git+https://github.com/Simon-Laux/tauri?branch=disable-javascript#e9bbf72b0e6a34558ac5067e7cef3a5be486aa9b"
 dependencies = [
  "heck 0.5.0",
  "proc-macro2",
@@ -3346,7 +3358,6 @@ dependencies = [
 [[package]]
 name = "tauri-runtime"
 version = "2.3.0"
-source = "git+https://github.com/Simon-Laux/tauri?branch=disable-javascript#e9bbf72b0e6a34558ac5067e7cef3a5be486aa9b"
 dependencies = [
  "dpi",
  "gtk",
@@ -3358,13 +3369,12 @@ dependencies = [
  "tauri-utils",
  "thiserror 2.0.11",
  "url",
- "windows 0.59.0",
+ "windows 0.60.0",
 ]
 
 [[package]]
 name = "tauri-runtime-wry"
 version = "2.3.0"
-source = "git+https://github.com/Simon-Laux/tauri?branch=disable-javascript#e9bbf72b0e6a34558ac5067e7cef3a5be486aa9b"
 dependencies = [
  "gtk",
  "http",
@@ -3381,15 +3391,14 @@ dependencies = [
  "tauri-utils",
  "url",
  "webkit2gtk",
- "webview2-com",
- "windows 0.59.0",
- "wry",
+ "webview2-com 0.36.0",
+ "windows 0.60.0",
+ "wry 0.50.0",
 ]
 
 [[package]]
 name = "tauri-utils"
 version = "2.1.1"
-source = "git+https://github.com/Simon-Laux/tauri?branch=disable-javascript#e9bbf72b0e6a34558ac5067e7cef3a5be486aa9b"
 dependencies = [
  "brotli",
  "cargo_metadata",
@@ -4080,9 +4089,23 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1730fcfc2f6b32d92096f5e97bc2b5ccafe14ad9d4787ef106daab2a20896def"
 dependencies = [
  "webview2-com-macros",
- "webview2-com-sys",
+ "webview2-com-sys 0.35.0",
  "windows 0.59.0",
  "windows-core 0.59.0",
+ "windows-implement",
+ "windows-interface",
+]
+
+[[package]]
+name = "webview2-com"
+version = "0.36.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b0d606f600e5272b514dbb66539dd068211cc20155be8d3958201b4b5bd79ed3"
+dependencies = [
+ "webview2-com-macros",
+ "webview2-com-sys 0.36.0",
+ "windows 0.60.0",
+ "windows-core 0.60.1",
  "windows-implement",
  "windows-interface",
 ]
@@ -4108,6 +4131,17 @@ dependencies = [
  "windows 0.59.0",
  "windows-core 0.59.0",
  "windows-targets 0.53.0",
+]
+
+[[package]]
+name = "webview2-com-sys"
+version = "0.36.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bfb27fccd3c27f68e9a6af1bcf48c2d82534b8675b83608a4d81446d095a17ac"
+dependencies = [
+ "thiserror 2.0.11",
+ "windows 0.60.0",
+ "windows-core 0.60.1",
 ]
 
 [[package]]
@@ -4691,9 +4725,52 @@ dependencies = [
  "url",
  "webkit2gtk",
  "webkit2gtk-sys",
- "webview2-com",
+ "webview2-com 0.35.0",
  "windows 0.59.0",
  "windows-core 0.59.0",
+ "windows-version",
+ "x11-dl",
+]
+
+[[package]]
+name = "wry"
+version = "0.50.0"
+source = "git+https://github.com/Simon-Laux/wry?branch=reload#f5f94f2a907e6a7ee9f315f750ef6fccb77dcb31"
+dependencies = [
+ "base64 0.22.1",
+ "block2 0.6.0",
+ "cookie",
+ "crossbeam-channel",
+ "dpi",
+ "dunce",
+ "gdkx11",
+ "gtk",
+ "html5ever",
+ "http",
+ "javascriptcore-rs",
+ "jni",
+ "kuchikiki",
+ "libc",
+ "ndk",
+ "objc2 0.6.0",
+ "objc2-app-kit",
+ "objc2-core-foundation",
+ "objc2-foundation 0.3.0",
+ "objc2-ui-kit",
+ "objc2-web-kit",
+ "once_cell",
+ "percent-encoding",
+ "raw-window-handle",
+ "sha2",
+ "soup3",
+ "tao-macros",
+ "thiserror 2.0.11",
+ "url",
+ "webkit2gtk",
+ "webkit2gtk-sys",
+ "webview2-com 0.36.0",
+ "windows 0.60.0",
+ "windows-core 0.60.1",
  "windows-version",
  "x11-dl",
 ]
@@ -4703,7 +4780,7 @@ name = "wry_disable_js"
 version = "0.1.0"
 dependencies = [
  "tao",
- "wry",
+ "wry 0.49.0",
 ]
 
 [[package]]
