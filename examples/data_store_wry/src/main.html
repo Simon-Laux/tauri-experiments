@@ -1,0 +1,17 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            let counter = Number(localStorage.getItem("counter") || "0");
+            counter++;
+            localStorage.setItem("counter", String(counter));
+
+            var d = document.createElement("div");
+            d.textContent = `Webpage loaded ${counter} times`;
+            d.style = "background-color:red;padding: 10px;margin: 10px";
+            document.body.appendChild(d);
+        </script>
+
+        <button onclick="location.reload()">Reload</button>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+[package]
+name = "data_store_wry"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tao = "0.32.0"
+# wry = { path = "../../../wry" }
+# wry = { git = "https://github.com/Simon-Laux/wry", branch = "reload" }
+wry = { workspace = true }

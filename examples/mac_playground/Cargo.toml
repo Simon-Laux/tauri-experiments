@@ -1,0 +1,35 @@
+[package]
+name = "mac_playground"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+objc2 = { version = "0.6", features = [
+    "exception",
+    "disable-encoding-assertions",
+] }
+objc2-foundation = { version = "0.3.0", default-features = false, features = [
+    "std",
+    "objc2-core-foundation",
+    "NSUUID",
+] }
+
+
+objc2-web-kit = { version = "0.3.0", default-features = false, features = [
+    "std",
+    "objc2-core-foundation",
+    "objc2-app-kit",
+    "block2",
+    "WKWebView",
+    "WKWebViewConfiguration",
+    "WKWebsiteDataStore",
+    "WKNavigation",
+    "WKNavigationDelegate",
+    "WKUserContentController",
+    "WKURLSchemeHandler",
+    "WKPreferences",
+    "WKUIDelegate",
+    "WKOpenPanelParameters",
+    "WKNavigationAction",
+    "WKWebpagePreferences",
+] }

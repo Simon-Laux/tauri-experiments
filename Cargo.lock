@@ -518,6 +518,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "data_store_wry"
+version = "0.1.0"
+dependencies = [
+ "tao",
+ "wry 0.50.1",
+]
+
+[[package]]
 name = "deranged"
 version = "0.3.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1697,6 +1705,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c41e0c4fef86961ac6d6f8a82609f55f31b05e4fce149ac5710e439df7619ba4"
 
 [[package]]
+name = "mac_playground"
+version = "0.1.0"
+dependencies = [
+ "objc2 0.6.0",
+ "objc2-foundation 0.3.0",
+ "objc2-web-kit",
+]
+
+[[package]]
 name = "markup5ever"
 version = "0.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2630,7 +2647,7 @@ name = "reload_wry"
 version = "0.1.0"
 dependencies = [
  "tao",
- "wry",
+ "wry 0.50.1",
 ]
 
 [[package]]
@@ -3409,7 +3426,7 @@ dependencies = [
  "webkit2gtk",
  "webview2-com",
  "windows",
- "wry",
+ "wry 0.50.0",
 ]
 
 [[package]]
@@ -4637,11 +4654,53 @@ dependencies = [
 ]
 
 [[package]]
+name = "wry"
+version = "0.50.1"
+dependencies = [
+ "base64 0.22.1",
+ "block2 0.6.0",
+ "cookie",
+ "crossbeam-channel",
+ "dpi",
+ "dunce",
+ "gdkx11",
+ "gtk",
+ "html5ever",
+ "http",
+ "javascriptcore-rs",
+ "jni",
+ "kuchikiki",
+ "libc",
+ "ndk",
+ "objc2 0.6.0",
+ "objc2-app-kit",
+ "objc2-core-foundation",
+ "objc2-foundation 0.3.0",
+ "objc2-ui-kit",
+ "objc2-web-kit",
+ "once_cell",
+ "percent-encoding",
+ "raw-window-handle",
+ "sha2",
+ "soup3",
+ "tao-macros",
+ "thiserror 2.0.11",
+ "url",
+ "webkit2gtk",
+ "webkit2gtk-sys",
+ "webview2-com",
+ "windows",
+ "windows-core 0.60.1",
+ "windows-version",
+ "x11-dl",
+]
+
+[[package]]
 name = "wry_disable_js"
 version = "0.1.0"
 dependencies = [
  "tao",
- "wry",
+ "wry 0.50.1",
 ]
 
 [[package]]

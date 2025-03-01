@@ -13,4 +13,6 @@ tauri-build = { git = "https://github.com/Simon-Laux/tauri", branch = "deltachat
 
 # tauri-build = { path = "../tauri/crates/tauri-build" }
 
-wry = { git = "https://github.com/Simon-Laux/wry", branch = "deltachat-branch" }
+
+# wry = { git = "https://github.com/Simon-Laux/wry", branch = "deltachat-branch" }
+wry = { path = "../wry" }
