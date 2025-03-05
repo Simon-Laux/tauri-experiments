@@ -17,6 +17,8 @@ use wry::{
 
 #[cfg(target_os = "macos")]
 fn main() -> wry::Result<()> {
+    use std::thread;
+
     let event_loop = EventLoop::new();
     let window = WindowBuilder::new().build(&event_loop).unwrap();
 
@@ -37,6 +39,14 @@ fn main() -> wry::Result<()> {
 
     let _webview = builder.build(&window)?;
 
+    println!("{:?}", thread::current().id());
+    println!("1");
+    wry::fetch_all_data_store_identifiers(move |ids| {
+        println!("{:?}", thread::current().id());
+        println!("2 {ids:?}");
+    })?;
+    println!("3");
+
     event_loop.run(move |event, _, control_flow| {
         *control_flow = ControlFlow::Wait;
 
@@ -48,4 +58,5 @@ fn main() -> wry::Result<()> {
             *control_flow = ControlFlow::Exit
         }
     });
+    // Ok(())
 }
