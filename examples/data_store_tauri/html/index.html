@@ -1,0 +1,15 @@
+<html>
+    <head></head>
+    <script>
+        const invoke = window.__TAURI__.core.invoke;
+
+        window.api = {
+            get_ids: () => invoke("get_ids"),
+            delete_id: (id) => invoke("delete_id", { uuid: id }),
+            new_window: () => invoke("new_window"),
+        };
+    </script>
+    <body>
+        Datastore test, open devtools and use <code>window.api</code>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+[package]
+name = "data_store_tauri"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "reload_tauri_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[dependencies]
+anyhow = "1.0.97"
+tauri = { workspace = true }
+tokio = { version = "1.43.0", features = ["time"] }
+uuid = { version = "1.15.1", features = ["v4"] }
+
+[build-dependencies]
+tauri-build = { workspace = true }
