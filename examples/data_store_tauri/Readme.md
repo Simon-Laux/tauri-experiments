@@ -11,15 +11,9 @@ cargo run
 ## What?
 
 ```rs
-let _ = window.reload();
+app.fetch_all_data_store_identifiers().await
+app.remove_data_store(uuid).await
 ```
 
-reloads the page of a webview window.
-
-
-### How to test on android?
-
-```
-cargo tauri android init
-cargo tauri android dev
-```
+macOS/iOS only.
+delete and list data_stores where browsing data like localstorage and cookies are stored.
